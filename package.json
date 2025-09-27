@@ -1,11 +1,13 @@
 {
   "name": "david-site",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "build-css": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch",
-    "build-css-prod": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --minify"
+    "dev": "tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --watch",
+    "build": "tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --minify",
+    "build-dev": "tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "@tailwindcss/postcss": "^4.1.13"
   }
 }
