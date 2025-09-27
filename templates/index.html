@@ -4,142 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dim Buro</title>
-    <link href="/static/css/output.css" rel="stylesheet">
+    <link href="{{ url_for('static', path='/dist/styles.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', path='/images/icons/favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
     <main>
-        <section>
+        <section class="part with-bg">
             <h1>Строительная компания "DIM BURO"</h1>
-            <h2>Воплощаем ваши мечты в ремонте</h2>
-            <nav>
-                <ul>
-                    <li>Ремонт</li>
-                    <li>Мебель</li>
-                    <li>Строительство</li>
-                    <li>Декорирование</li>
-                    <li>Дизайн и проектирование</li>
+            <h2 class="font-bold text-4xl">Воплощаем ваши мечты в ремонте</h2>
+            <nav class="absolute inset-x-7.5 bottom-7.5 flex justify-between">
+                <ul class="flex self-end">
+                    <li class="button whitespace-nowrap">Ремонт</li>
+                    <li class="button whitespace-nowrap">Мебель</li>
+                    <li class="button whitespace-nowrap">Строительство</li>
+                    <li class="button whitespace-nowrap">Декорирование</li>
+                    <li class="button whitespace-nowrap">Дизайн и проектирование</li>
                 </ul>
+                <img class="size-32" src="" alt="">
             </nav>
         </section>
-        <section>
+        <section class="part with-bg">
             <h2>О РЕМОНТЕ</h2>
             <section>
                 <h3>ЭТАПЫ РЕМОНТА ПОД КЛЮЧ</h3>
-                <ol>
+                <ol class="grid grid-cols-4 gap-4 items-stretch">
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/stages/project-design.jpg" alt="">
+                            <figcaption>Дизайн проекта</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/stages/repair.jpg" alt="">
+                            <figcaption>Ремонт</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/stages/project-design.jpg" alt="">
+                            <figcaption>Мебель</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/stages/project-design.jpg" alt="">
+                            <figcaption>Декорирование</figcaption>
                         </figure>
                     </li>
                 </ol>
             </section>
             <section>
                 <h3>ЭКСКЛЮЗИВНЫЕ РЕШЕНИЯ ДЛЯ ЖК PREMIUM КЛАССА</h3>
-                <ol>
+                <ol class="grid grid-cols-3 grid-rows-2 gap-3 items-stretch">
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/solutions/bathrooms.jpg" alt="">
+                            <figcaption>Кухня</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/solutions/bathrooms.jpg" alt="">
+                            <figcaption>Гардеробные</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/solutions/bathrooms.jpg" alt="">
+                            <figcaption>Ванные комнаты</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/solutions/doors.jpg" alt="">
+                            <figcaption>Двери</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/solutions/wall-panels.jpg" alt="">
+                            <figcaption>Стеновые панели</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/solutions/closets.jpg" alt="">
+                            <figcaption>Шкафы</figcaption>
                         </figure>
                     </li>
                 </ol>
             </section>
         </section>
-        <section>
+        <section class="part with-bg">
             <h2>КЕЙСЫ</h2>
             <section>
                 <h3>НАШИ ПРОЕКТЫ ДЛЯ ЧАСТНЫХ КЛИЕНТОВ</h3>
-                <ul>
+                <ul class="grid grid-cols-3 grid-rows-2 gap-3 items-stretch">
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/projects/brodskiy.jpg" alt="">
+                            <figcaption>"БРОДСКИЙ"</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/projects/reka.jpg" alt="">
+                            <figcaption>"РЕКА"</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/projects/nebo.jpg" alt="">
+                            <figcaption>"НЕБО"</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/projects/polyanka-44.jpg" alt="">
+                            <figcaption>"ПОЛЯНКА 44"</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/projects/barin-haus.jpg" alt="">
+                            <figcaption>"БАРИН ХАУС"</figcaption>
                         </figure>
                     </li>
                     <li>
-                        <figure>
-                            <img src="" alt="">
-                            <figcaption></figcaption>
+                        <figure class="h-full pb-7">
+                            <img class="h-full" src="static/images/projects/sadoviye-kvartali.jpg" alt="">
+                            <figcaption>"САДОВЫЕ КВАРТАЛЫ"</figcaption>
                         </figure>
                     </li>
                 </ul>
             </section>
         </section>
     </main>
-    <footer>
+    <footer class="part with-bg">
         <div>
             <h2></h2>
             <h3></h3>
