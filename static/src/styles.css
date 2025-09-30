@@ -3,8 +3,10 @@
 @layer base {
     * {
         @apply text-white min-h-min;
-        /* Временно
-        @apply border; */
+        /*
+        Временно
+        @apply border;
+        */
     }
     h1 {
         @apply text-xl font-thin text-gray-200;
@@ -26,15 +28,11 @@
 
 @layer components {
     .part {
-        @apply h-screen p-7.5;
+        @apply min-h-screen p-7.5;
     }
     .button {
         border-radius: 1px;
         @apply border size-min rounded-full p-1 m-1;
     }
     /* Временно */
-    .with-bg {
-        background-image: url("https://i.ytimg.com/vi/e-8Kgp0d464/maxresdefault.jpg");
-        background-size: cover;
-    }
 }

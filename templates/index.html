@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <section class="part with-bg">
+        <section class="part" style="background: url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat">
             <h1>Строительная компания "DIM BURO"</h1>
             <h2 class="font-bold text-4xl">Воплощаем ваши мечты в ремонте</h2>
             <nav class="absolute inset-x-7.5 bottom-7.5 flex justify-between">
@@ -20,10 +20,10 @@
                     <li class="button whitespace-nowrap">Декорирование</li>
                     <li class="button whitespace-nowrap">Дизайн и проектирование</li>
                 </ul>
-                <img class="size-32" src="" alt="">
+                <img class="size-32" src="static\images\QRs\qr1.jpg" alt="">
             </nav>
         </section>
-        <section class="part with-bg">
+        <section class="part" style="background: url('{{ url_for('static', path='/images/backgrounds/bg2.jpg') }}') center/cover no-repeat">
             <h2>О РЕМОНТЕ</h2>
             <section>
                 <h3>ЭТАПЫ РЕМОНТА ПОД КЛЮЧ</h3>
@@ -42,13 +42,13 @@
                     </li>
                     <li>
                         <figure class="h-full pb-7">
-                            <img class="h-full" src="static/images/stages/project-design.jpg" alt="">
+                            <img class="h-full" src="static/images/stages/furniture.jpg" alt="">
                             <figcaption>Мебель</figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure class="h-full pb-7">
-                            <img class="h-full" src="static/images/stages/project-design.jpg" alt="">
+                            <img class="h-full" src="static/images/stages/decoration.jpg" alt="">
                             <figcaption>Декорирование</figcaption>
                         </figure>
                     </li>
@@ -59,13 +59,13 @@
                 <ol class="grid grid-cols-3 grid-rows-2 gap-3 items-stretch">
                     <li>
                         <figure class="h-full pb-7">
-                            <img class="h-full" src="static/images/solutions/bathrooms.jpg" alt="">
+                            <img class="h-full" src="static/images/solutions/kitchen.jpg" alt="">
                             <figcaption>Кухня</figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure class="h-full pb-7">
-                            <img class="h-full" src="static/images/solutions/bathrooms.jpg" alt="">
+                            <img class="h-full" src="static/images/solutions/wardrobes.jpg" alt="">
                             <figcaption>Гардеробные</figcaption>
                         </figure>
                     </li>
@@ -96,7 +96,7 @@
                 </ol>
             </section>
         </section>
-        <section class="part with-bg">
+        <section class="part" style="background: url('{{ url_for('static', path='/images/backgrounds/bg2.jpg') }}') center/cover no-repeat">
             <h2>КЕЙСЫ</h2>
             <section>
                 <h3>НАШИ ПРОЕКТЫ ДЛЯ ЧАСТНЫХ КЛИЕНТОВ</h3>
@@ -141,7 +141,7 @@
             </section>
         </section>
     </main>
-    <footer class="part with-bg">
+    <footer class="part" style="background: url('{{ url_for('static', path='/images/backgrounds/bg3.jpg') }}') center/cover no-repeat">
         <div>
             <h2></h2>
             <h3></h3>
@@ -157,8 +157,8 @@
                 <li></li>
             </ul>
         </div>
-        <img src="" alt="">
-        <img src="" alt="">
+        <img class="size-32" src="static\images\QRs\qr1.jpg" alt="">
+        <img class="size-32" src="static\images\QRs\qr2.jpg" alt="">
     </footer>
 </body>
 </html>
