@@ -20,16 +20,13 @@
     section {
         @apply relative;
     }
-    img {
-        @apply bg-cover;
+    figure {
+        @apply relative;
     }
     /* Временно */
 }
 
 @layer components {
-    .part {
-        @apply min-h-screen p-7.5;
-    }
     .button {
         border-radius: 1px;
         @apply border size-min rounded-full p-1 m-1;
