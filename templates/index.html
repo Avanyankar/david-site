@@ -12,10 +12,8 @@
         <img class="size-32 justify-self-end bg-contain" src="static\images\icons\logo.jpg" alt="">
     </header>
     <main>
-        <section class="min-h-screen p-7.5 pt-18" style="background: url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat">
-            <div class="absolute w-full h-full inset-0 bg-gradient-to-br from-[#392615] via-transparent"></div>
-            <h1>Строительная компания "DIM BURO"</h1>
-            <h2 class="font-bold text-8xl">Воплощаем ваши мечты в ремонте</h2>
+        <section class="min-h-screen p-7.5 pt-18" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat">  
+            <h1 class="font-bold text-8xl">Воплощаем ваши мечты в ремонте</h2>
             <nav class="absolute inset-x-7.5 bottom-7.5 flex justify-between">
                 <ul class="flex self-end">
                     <li class="button whitespace-nowrap">Ремонт</li>
@@ -27,104 +25,102 @@
                 <img class="hidden md:block size-32 bg-center" src="static\images\QRs\qr1.jpg" alt="">
             </nav>
         </section>
-        <div style="background: url('{{ url_for('static', path='/images/backgrounds/bg2.jpg') }}') center/cover no-repeat fixed">
-            <section class="p-7.5">
-                <h2>О РЕМОНТЕ</h2>
-                <section>
-                    <h3>ЭТАПЫ РЕМОНТА ПОД КЛЮЧ</h3>
-                    <ol class="grid grid-cols-4 gap-4 items-stretch p-2">
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/stages/project-design.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">
-                                    <span class="font-semibold">Дизайн проекта</span>
-                                    <details class="mt-2 text-sm">Наше дизайн бюро воплотит ваши мечты и согласует с вами ремонт и планировку объекта</details>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/stages/repair.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">
-                                    <span class="font-semibold">Ремонт</span>
-                                    <details class="mt-2 text-sm">Выполним все с безупречным качеством и вниманием к каждой детали</details>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/stages/furniture.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">
-                                    <span class="font-semibold">Мебель</span>
-                                    <details class="mt-2 text-sm">Изготавливаем и устанавливаем мебель под ваш проект и особенности пространства</details>
-                                </figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/stages/decoration.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">
-                                    <span class="font-semibold">Декорирование</span>
-                                    <details class="mt-2 text-sm">Комплексный подход к ремонту позволит вам переехать в полностью готовый объект</details>
-                                </figcaption>
-                            </figure>
-                        </li>
-                    </ol>
-                </section>
-                <section>
-                    <h3>ЭКСКЛЮЗИВНЫЕ РЕШЕНИЯ ДЛЯ ЖК PREMIUM КЛАССА</h3>
-                    <ul class="grid grid-cols-3 grid-rows-3 gap-3 items-stretch p-2">
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/kitchen-1.jpg" alt="">
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/wardrobe.jpg" alt="">
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/bathroom.jpg" alt="">
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/office-2.jpg" alt="">
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/master-room-1.jpg" alt="">
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/master-room-2.jpg" alt="">
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/office-1.jpg" alt="">
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/kitchen-2.jpg" alt="">
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-cente bg-containr" src="static/images/solutions/hall.jpg" alt="">
-                            </figure>
-                        </li>
-                    </ul>
-                </section>
+        <section class="p-7.5" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg2.jpg') }}') center/cover no-repeat fixed">
+            <h2>О РЕМОНТЕ</h2>
+            <section>
+                <h3>ЭТАПЫ РЕМОНТА ПОД КЛЮЧ</h3>
+                <ul class="grid grid-cols-4 gap-4 items-stretch p-2">
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/project-design.jpg') }}') 75% 45%/cover no-repeat" src="" alt="">
+                            <figcaption class="absolute bottom-4.5 left-4.5 right-4.5">
+                                <span class="font-semibold">Дизайн проекта</span>
+                                <details class="mt-2 text-sm">Наше дизайн бюро воплотит ваши мечты и согласует с вами ремонт и планировку объекта</details>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/repair.jpg') }}') 75% 45%/cover no-repeat" src="" alt="">
+                            <figcaption class="absolute bottom-4.5 left-4.5 right-4.5">
+                                <span class="font-semibold">Ремонт</span>
+                                <details class="mt-2 text-sm">Выполним все с безупречным качеством и вниманием к каждой детали</details>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/furniture.jpg') }}') 75% 45%/cover no-repeat"" src="" alt="">
+                            <figcaption class="absolute bottom-4.5 left-4.5 right-4.5">
+                                <span class="font-semibold">Мебель</span>
+                                <details class="mt-2 text-sm">Изготавливаем и устанавливаем мебель под ваш проект и особенности пространства</details>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/decoration.jpg') }}') 75% 45%/cover no-repeat" src="" alt="">
+                            <figcaption class="absolute bottom-4.5 left-4.5 right-4.5">
+                                <span class="font-semibold">Декорирование</span>
+                                <details class="mt-2 text-sm">Комплексный подход к ремонту позволит вам переехать в полностью готовый объект</details>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
             </section>
-        </div>
+            <section>
+                <h3>ЭКСКЛЮЗИВНЫЕ РЕШЕНИЯ ДЛЯ ЖК PREMIUM КЛАССА</h3>
+                <ul class="grid grid-cols-3 grid-rows-3 gap-3 items-stretch p-2">
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/kitchen-1.jpg" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/wardrobe.jpg" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/bathroom.jpg" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/office-2.jpg" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/master-room-1.jpg" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/master-room-2.jpg" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/office-1.jpg" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/kitchen-2.jpg" alt="">
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="h-full flex flex-col bg-gradient-to-b from-[#392615] via-transparent">
+                            <img class="flex-1 bg-cente bg-containr" src="static/images/solutions/hall.jpg" alt="">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </section>
     </main>
-    <footer class="min-h-screen relative p-7.5" style="background: url('{{ url_for('static', path='/images/backgrounds/bg3.jpg') }}') center/cover no-repeat">
+    <footer class="min-h-screen relative p-7.5" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg3.jpg') }}') center/cover no-repeat">
         <div>
             <p>
                 От идеи до реализации: Разрабатываем дизайн-проект и выполняем премиальный ремонт, обеспечивая полное соответствие результата вашему видению.

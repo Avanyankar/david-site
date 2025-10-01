@@ -9,7 +9,7 @@
         */
     }
     h1 {
-        @apply text-xl font-thin text-gray-200;
+        @apply text-xl font-thin text-white;
     }
     h2 {
         @apply text-xl font-thin text-gray-200;
