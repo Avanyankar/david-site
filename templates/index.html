@@ -8,10 +8,14 @@
     <link rel="icon" href="{{ url_for('static', path='/images/icons/favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
+    <header class="fixed w-full z-50">
+        <img class="size-32 justify-self-end bg-contain" src="static\images\icons\logo.jpg" alt="">
+    </header>
     <main>
-        <section class="min-h-screen p-7.5" style="background: url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat">
+        <section class="min-h-screen p-7.5 pt-18" style="background: url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat">
+            <div class="absolute w-full h-full inset-0 bg-gradient-to-br from-[#392615] via-transparent"></div>
             <h1>Строительная компания "DIM BURO"</h1>
-            <h2 class="font-bold text-4xl">Воплощаем ваши мечты в ремонте</h2>
+            <h2 class="font-bold text-8xl">Воплощаем ваши мечты в ремонте</h2>
             <nav class="absolute inset-x-7.5 bottom-7.5 flex justify-between">
                 <ul class="flex self-end">
                     <li class="button whitespace-nowrap">Ремонт</li>
@@ -20,7 +24,7 @@
                     <li class="button whitespace-nowrap">Декорирование</li>
                     <li class="button whitespace-nowrap">Дизайн и проектирование</li>
                 </ul>
-                <img class="size-32 bg-center" src="static\images\QRs\qr1.jpg" alt="">
+                <img class="hidden md:block size-32 bg-center" src="static\images\QRs\qr1.jpg" alt="">
             </nav>
         </section>
         <div style="background: url('{{ url_for('static', path='/images/backgrounds/bg2.jpg') }}') center/cover no-repeat fixed">
@@ -33,8 +37,8 @@
                             <figure class="h-full flex flex-col">
                                 <img class="flex-1 bg-center bg-contain" src="static/images/stages/project-design.jpg" alt="">
                                 <figcaption class="absolute bottom-4.5 left-4.5">
-                                    <span class="font-semibold text-gray-800">Дизайн проекта</span>
-                                    <details class="mt-2 text-sm text-gray-600">Наше дизайн бюро воплотит ваши мечты и согласует с вами ремонт и планировку объекта</details>
+                                    <span class="font-semibold">Дизайн проекта</span>
+                                    <details class="mt-2 text-sm">Наше дизайн бюро воплотит ваши мечты и согласует с вами ремонт и планировку объекта</details>
                                 </figcaption>
                             </figure>
                         </li>
@@ -42,8 +46,8 @@
                             <figure class="h-full flex flex-col">
                                 <img class="flex-1 bg-center bg-contain" src="static/images/stages/repair.jpg" alt="">
                                 <figcaption class="absolute bottom-4.5 left-4.5">
-                                    <span class="font-semibold text-gray-800">Ремонт</span>
-                                    <details class="mt-2 text-sm text-gray-600">Выполним все с безупречным качеством и вниманием к каждой детали</details>
+                                    <span class="font-semibold">Ремонт</span>
+                                    <details class="mt-2 text-sm">Выполним все с безупречным качеством и вниманием к каждой детали</details>
                                 </figcaption>
                             </figure>
                         </li>
@@ -51,8 +55,8 @@
                             <figure class="h-full flex flex-col">
                                 <img class="flex-1 bg-center bg-contain" src="static/images/stages/furniture.jpg" alt="">
                                 <figcaption class="absolute bottom-4.5 left-4.5">
-                                    <span class="font-semibold text-gray-800">Мебель</span>
-                                    <details class="mt-2 text-sm text-gray-600">Изготавливаем и устанавливаем мебель под ваш проект и особенности пространства</details>
+                                    <span class="font-semibold">Мебель</span>
+                                    <details class="mt-2 text-sm">Изготавливаем и устанавливаем мебель под ваш проект и особенности пространства</details>
                                 </figcaption>
                             </figure>
                         </li>
@@ -60,8 +64,8 @@
                             <figure class="h-full flex flex-col">
                                 <img class="flex-1 bg-center bg-contain" src="static/images/stages/decoration.jpg" alt="">
                                 <figcaption class="absolute bottom-4.5 left-4.5">
-                                    <span class="font-semibold text-gray-800">Декорирование</span>
-                                    <details class="mt-2 text-sm text-gray-600">Комплексный подход к ремонту позволит вам переехать в полностью готовый объект</details>
+                                    <span class="font-semibold">Декорирование</span>
+                                    <details class="mt-2 text-sm">Комплексный подход к ремонту позволит вам переехать в полностью готовый объект</details>
                                 </figcaption>
                             </figure>
                         </li>
@@ -69,85 +73,50 @@
                 </section>
                 <section>
                     <h3>ЭКСКЛЮЗИВНЫЕ РЕШЕНИЯ ДЛЯ ЖК PREMIUM КЛАССА</h3>
-                    <ol class="grid grid-cols-3 grid-rows-2 gap-3 items-stretch p-2">
+                    <ul class="grid grid-cols-3 grid-rows-3 gap-3 items-stretch p-2">
                         <li>
                             <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/kitchen.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">Кухня</figcaption>
+                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/kitchen-1.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/wardrobes.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">Гардеробные</figcaption>
+                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/wardrobe.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/bathrooms.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">Ванные комнаты</figcaption>
+                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/bathroom.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/doors.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">Двери</figcaption>
+                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/office-2.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/wall-panels.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">Стеновые панели</figcaption>
+                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/master-room-1.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/closets.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">Шкафы</figcaption>
-                            </figure>
-                        </li>
-                    </ol>
-                </section>
-            </section>
-            <section class="p-7.5">
-                <h2>КЕЙСЫ</h2>
-                <section>
-                    <h3>НАШИ ПРОЕКТЫ ДЛЯ ЧАСТНЫХ КЛИЕНТОВ</h3>
-                    <ul class="grid grid-cols-3 grid-rows-2 gap-3 items-stretch p-2">
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/projects/brodskiy.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">"БРОДСКИЙ"</figcaption>
+                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/master-room-2.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/projects/reka.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">"РЕКА"</figcaption>
+                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/office-1.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-cente bg-containr" src="static/images/projects/nebo.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">"НЕБО"</figcaption>
+                                <img class="flex-1 bg-center bg-contain" src="static/images/solutions/kitchen-2.jpg" alt="">
                             </figure>
                         </li>
                         <li>
                             <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/projects/polyanka-44.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">"ПОЛЯНКА 44"</figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/projects/barin-haus.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">"БАРИН ХАУС"</figcaption>
-                            </figure>
-                        </li>
-                        <li>
-                            <figure class="h-full flex flex-col">
-                                <img class="flex-1 bg-center bg-contain" src="static/images/projects/sadoviye-kvartali.jpg" alt="">
-                                <figcaption class="absolute bottom-4.5 left-4.5">"САДОВЫЕ КВАРТАЛЫ"</figcaption>
+                                <img class="flex-1 bg-cente bg-containr" src="static/images/solutions/hall.jpg" alt="">
                             </figure>
                         </li>
                     </ul>
@@ -155,24 +124,22 @@
             </section>
         </div>
     </main>
-    <footer class="min-h-screen p-7.5" style="background: url('{{ url_for('static', path='/images/backgrounds/bg3.jpg') }}') center/cover no-repeat">
+    <footer class="min-h-screen relative p-7.5" style="background: url('{{ url_for('static', path='/images/backgrounds/bg3.jpg') }}') center/cover no-repeat">
         <div>
-            <h2></h2>
-            <h3></h3>
             <p>
-
+                От идеи до реализации: Разрабатываем дизайн-проект и выполняем премиальный ремонт, обеспечивая полное соответствие результата вашему видению.
             </p>
             <div>
-
+                <b>Марат Мартиросов</b><br>
+                Генеральный директор
             </div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <p>
+                +7 (903) 562 - 57 - 40<br>
+                mfkuznecov.ru
+            </p>
         </div>
-        <img class="size-32 bg-cover" src="static\images\QRs\qr1.jpg" alt="">
-        <img class="size-32 bg-cover" src="static\images\QRs\qr2.jpg" alt="">
+        <img class="hidden md:block absolute bottom-4.5 right-4.5 size-32 bg-cover" src="static\images\QRs\qr1.jpg" alt="">
+        <img class="hidden md:block absolute bottom-4.5 right-37 size-32 bg-cover" src="static\images\QRs\qr2.jpg" alt="">
     </footer>
 </body>
 </html>
