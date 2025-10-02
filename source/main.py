@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Form, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import FileResponse, HTMLResponse
@@ -13,17 +13,26 @@ static_dir = current_dir.parent / "static"
 app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
 templates = Jinja2Templates(directory="templates")
 
+
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
+
 
 @app.get("/favicon.ico")
 async def favicon():
     return FileResponse("static/images/icons/favicon.ico")
 
+
 @app.get("/.well-known/appspecific/com.chrome.devtools.json")
 async def chrome_devtools():
     return {"message": "No DevTools configuration"}
+
+
+@app.post("/postdata")
+async def postdata(username = Form(), phonenumber=Form()):
+    return {"username": username, "phonenumber": phonenumber}
+
 
 if __name__ == "__main__":
     import uvicorn

@@ -1,4 +1,4 @@
 # david-s-site
 
-tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --watch --no-cache
-tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --minify --no-cache
+tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --watch
+tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --minify

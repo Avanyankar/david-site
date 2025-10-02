@@ -9,13 +9,32 @@
 </head>
 <body>
     <header class="fixed w-full z-50">
-        <img class="size-32 justify-self-end bg-contain" src="static\images\icons\logo.jpg" alt="">
+        <img class="absolute size-32 right-0 top-0 bg-contain" src="static\images\icons\logo.jpg" alt="">
     </header>
+    <div class="fixed right-0 top-1/2 -translate-y-1/2 group z-50">
+        <div class="bg-white border border-r-0 px-4 py-2 cursor-pointer flex items-center gap-2 text-black">
+            <div class="w-0 h-0 border-t-[5px] border-b-[5px] border-r-[5px] border-t-transparent border-b-transparent border-r-black"></div>
+            Оставить заявку
+        </div>
+        <div class="absolute right-0 top-full w-80 h-48 bg-black border border-t-0 hidden group-hover:block">
+            <form action="postdata" method="post">
+                <p>
+                    ФИО:<br>
+                    <input name="username" />
+                </p>
+                <p>
+                    Номер телефона:<br>
+                    <input name="phonenumber" type="number" />
+                </p>
+                <input type="submit" value="Send" />
+            </form>
+        </div>
+    </div>
     <main>
         <section class="min-h-screen p-7.5 pt-18" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat">  
             <h1 class="font-bold text-8xl">Воплощаем ваши мечты в ремонте</h2>
             <nav class="absolute inset-x-7.5 bottom-7.5 flex justify-between">
-                <ul class="flex self-end">
+                <ul class="flex self-end flex-wrap gap-2">
                     <li class="button whitespace-nowrap">Ремонт</li>
                     <li class="button whitespace-nowrap">Мебель</li>
                     <li class="button whitespace-nowrap">Строительство</li>
@@ -121,19 +140,19 @@
         </section>
     </main>
     <footer class="h-screen relative p-7.5" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg3.jpg') }}') center/cover no-repeat">
-        <div class="w-1/2 h-full p-8 relative border border-white">
+        <div class="w-1/2 min-w-min h-full p-8 relative border border-white">
             <div class="absolute inset-0 w-full h-full bg-[#66584F] opacity-75"></div>
-            <div class="z-20 h-full flex flex-col justify-between">
-                <p>
+            <div class="relative z-20 h-full flex flex-col justify-between">
+                <p class="text-white font-bold text-2xl">
                     От идеи до реализации: Разрабатываем дизайн-проект и выполняем премиальный ремонт, обеспечивая полное соответствие результата вашему видению.
                 </p>
-                <div>
-                    <b>Марат Мартиросов</b><br>
+                <div class="text-white w-min border border-white p-3 whitespace-nowrap rounded-xl">
+                    <b class="text-3xl">Марат Мартиросов</b><br>
                     Генеральный директор
                 </div>
-                <p class="font-thin">
-                    +7 (903) 562 - 57 - 40<br>
-                    dimburo.ru
+                <p class="font-thin text-white">
+                    <a href="callto:7-903-562-5740">+7 (903) 562 - 57 - 40</a><br><br>
+                    <a href="https://dimburo.ru">dimburo.ru</a>
                 </p>
             </div>
         </div>
