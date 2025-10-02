@@ -9,10 +9,10 @@
         */
     }
     h1 {
-        @apply text-xl font-thin text-white;
+        @apply text-xl font-thin;
     }
     h2 {
-        @apply text-xl font-thin text-gray-200;
+        @apply text-xl font-thin;
     }
     h3 {
         @apply text-4xl;
@@ -28,7 +28,6 @@
 
 @layer components {
     .button {
-        border-radius: 1px;
         @apply border size-min rounded-full p-1 m-1;
     }
     /* Временно */
