@@ -9,10 +9,10 @@ app = FastAPI()
 current_dir = Path(__file__).parent
 
 static_dir = current_dir.parent / "static"
+templates_dir = current_dir.parent / "templates"
 
 app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
-templates = Jinja2Templates(directory="templates")
-
+templates = Jinja2Templates(directory=str(templates_dir))
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):

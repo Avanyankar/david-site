@@ -8,6 +8,20 @@
     "build-dev": "tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.13"
-  }
+    "@tailwindcss/postcss": "^4.1.13",
+    "tailwindcss": "^4.1.14"
+  },
+  "description": "tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --watch tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --minify",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avanyankar/david-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Avanyankar/david-site/issues"
+  },
+  "homepage": "https://github.com/Avanyankar/david-site#readme"
 }
