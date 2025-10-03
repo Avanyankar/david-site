@@ -9,30 +9,32 @@
 </head>
 <body>
     <header class="fixed w-full z-50">
-        <img class="absolute size-32 right-0 top-0 bg-contain" src="static\images\icons\logo.jpg" alt="">
+        <img class="absolute size-32 right-0 top-0 bg-contain" src="static\images\icons\logo.png" alt="">
     </header>
-    <div class="fixed right-0 top-1/2 -translate-y-1/2 group z-50">
-        <div class="bg-white border border-r-0 px-4 py-2 cursor-pointer flex items-center gap-2 text-black">
-            <div class="w-0 h-0 border-t-[5px] border-b-[5px] border-r-[5px] border-t-transparent border-b-transparent border-r-black"></div>
+    <div class="min-w-min border border-white fixed right-0 top-1/2 -translate-y-1/2 group z-50">
+        <div class="-z-1 absolute inset-0 w-full h-full bg-[#66584F] opacity-75"></div>
+        <div class="w-full px-4 py-2 cursor-pointer flex items-center gap-2 text-white">
+            <div class="w-0 h-0 border-t-[5px] border-b-[5px] border-r-[5px] border-t-transparent border-b-transparent border-r-white"></div>
             Оставить заявку
         </div>
-        <div class="absolute right-0 top-full w-80 h-48 bg-black border border-t-0 hidden group-hover:block">
-            <form action="postdata" method="post">
+        <div class="absolute right-0 top-full w-min h-min border border-t-0 hidden group-hover:block">
+            <div class="-z-1 absolute inset-0 w-full h-full bg-[#66584F] opacity-75"></div>
+            <form class="p-1" action="/postdata" method="post">
                 <p>
                     ФИО:<br>
-                    <input name="username" />
+                    <input class="border-b border-white m-1" name="username" />
                 </p>
                 <p>
                     Номер телефона:<br>
-                    <input name="phonenumber" type="number" />
+                    <input class="border-b border-white m-1" name="phonenumber" type="number" />
                 </p>
-                <input type="submit" value="Send" />
+                <input type="submit" value="Отправить заявку" />
             </form>
         </div>
     </div>
     <main>
         <section class="min-h-screen p-7.5 pt-18" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat">  
-            <h1 class="font-bold text-8xl">Воплощаем ваши мечты в ремонте</h2>
+            <h1 class="font-bold text-8xl sm:text-6xl">Воплощаем ваши мечты в ремонте</h2>
             <nav class="absolute inset-x-7.5 bottom-7.5 flex justify-between">
                 <ul class="flex self-end flex-wrap gap-2">
                     <li class="button whitespace-nowrap">Ремонт</li>
@@ -48,7 +50,7 @@
             <h2>О РЕМОНТЕ</h2>
             <section>
                 <h3>ЭТАПЫ РЕМОНТА ПОД КЛЮЧ</h3>
-                <ul class="grid grid-cols-4 gap-4 items-stretch p-2">
+                <ul class="grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-4 items-stretch p-2">
                     <li>
                         <figure class="min-h-[250px] h-full flex flex-col">
                             <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/project-design.jpg') }}') center/cover no-repeat" src="" alt="">
@@ -91,48 +93,48 @@
                 <h3>ЭКСКЛЮЗИВНЫЕ РЕШЕНИЯ ДЛЯ ЖК PREMIUM КЛАССА</h3>
                 <ul class="grid grid-cols-3 grid-rows-3 gap-3 items-stretch p-2">
                     <li>
-                        <figure class="h-full flex flex-col">
-                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/kitchen-1.jpg" alt="">
+                        <figure class="min-h-[250px] h-full flex flex-col">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/kitchen-1.jpg') }}') center/cover no-repeat" src="" alt="">
                         </figure>
                     </li>
                     <li>
-                        <figure class="h-full flex flex-col">
-                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/wardrobe.jpg" alt="">
+                        <figure class="min-h-[250px] h-full flex flex-col">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/wardrobe.jpg') }}') center/cover no-repeat" src="" alt="">
                         </figure>
                     </li>
                     <li>
-                        <figure class="h-full flex flex-col">
-                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/bathroom.jpg" alt="">
+                        <figure class="min-h-[250px] h-full flex flex-col">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/bathroom.jpg') }}') center/cover no-repeat" src="" alt="">
                         </figure>
                     </li>
                     <li>
-                        <figure class="h-full flex flex-col">
-                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/office-2.jpg" alt="">
+                        <figure class="min-h-[250px] h-full flex flex-col">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/office-2.jpg') }}') center/cover no-repeat" src="" alt="">
                         </figure>
                     </li>
                     <li>
-                        <figure class="h-full flex flex-col">
-                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/master-room-1.jpg" alt="">
+                        <figure class="min-h-[250px] h-full flex flex-col">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/master-room-1.jpg') }}') center/cover no-repeat" src="" alt="">
                         </figure>
                     </li>
                     <li>
-                        <figure class="h-full flex flex-col">
-                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/master-room-2.jpg" alt="">
+                        <figure class="min-h-[250px] h-full flex flex-col">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/master-room-2.jpg') }}') center/cover no-repeat" src="" alt="">
                         </figure>
                     </li>
                     <li>
-                        <figure class="h-full flex flex-col">
-                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/office-1.jpg" alt="">
+                        <figure class="min-h-[250px] h-full flex flex-col">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/office-1.jpg') }}') center/cover no-repeat" src="" alt="">
                         </figure>
                     </li>
                     <li>
-                        <figure class="h-full flex flex-col">
-                            <img class="flex-1 bg-center bg-contain" src="static/images/solutions/kitchen-2.jpg" alt="">
+                        <figure class="min-h-[250px] h-full flex flex-col">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/kitchen-2.jpg') }}') center/cover no-repeat" src="" alt="">
                         </figure>
                     </li>
                     <li>
-                        <figure class="h-full flex flex-col">
-                            <img class="flex-1 bg-cente bg-containr" src="static/images/solutions/hall.jpg" alt="">
+                        <figure class="min-h-[250px] h-full flex flex-col">
+                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/hall.jpg') }}') center/cover no-repeat" src="" alt="">
                         </figure>
                     </li>
                 </ul>

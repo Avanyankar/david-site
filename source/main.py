@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Form, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from pathlib import Path
 
 app = FastAPI()
@@ -31,7 +31,7 @@ async def chrome_devtools():
 
 @app.post("/postdata")
 async def postdata(username = Form(), phonenumber=Form()):
-    return {"username": username, "phonenumber": phonenumber}
+    return RedirectResponse(url="/", status_code=303) # {"username": username, "phonenumber": phonenumber}
 
 
 if __name__ == "__main__":

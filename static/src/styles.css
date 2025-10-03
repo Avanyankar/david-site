@@ -2,7 +2,7 @@
 
 @layer base {
     * {
-        @apply text-white min-h-min;
+        @apply text-white;
         /*
         Временно
         @apply border;
