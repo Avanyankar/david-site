@@ -13,11 +13,11 @@
     </header>
     <div class="min-w-min border border-white fixed right-0 top-1/2 -translate-y-1/2 group z-50">
         <div class="-z-1 absolute inset-0 w-full h-full bg-[#66584F] opacity-75"></div>
-        <div class="w-full px-4 py-2 cursor-pointer flex items-center gap-2 text-white">
+        <div class="w-full px-4 py-2 cursor-pointer flex items-center gap-2 text-white touch-manipulation">
             <div class="w-0 h-0 border-t-[5px] border-b-[5px] border-r-[5px] border-t-transparent border-b-transparent border-r-white"></div>
-            Оставить заявку
+            <span class="hidden md:block">Оставить заявку</span>
         </div>
-        <div class="absolute right-0 top-full w-min h-min border border-t-0 hidden group-hover:block">
+        <div class="absolute right-0 top-full w-[50wh] md:w-min h-min border border-t-0 hidden group-hover:block group-focus:block">
             <div class="-z-1 absolute inset-0 w-full h-full bg-[#66584F] opacity-75"></div>
             <form class="p-1" action="/postdata" method="post">
                 <p>
@@ -26,7 +26,7 @@
                 </p>
                 <p>
                     Номер телефона:<br>
-                    <input class="border-b border-white m-1" name="phonenumber" type="number" />
+                    <input class="border-b border-white m-1" name="phonenumber" type="tel" />
                 </p>
                 <input type="submit" value="Отправить заявку" />
             </form>
@@ -34,7 +34,7 @@
     </div>
     <main>
         <section class="min-h-screen p-7.5 pt-18" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat">  
-            <h1 class="font-bold text-8xl sm:text-6xl">Воплощаем ваши мечты в ремонте</h2>
+            <h1>Воплощаем ваши мечты в ремонте</h2>
             <nav class="absolute inset-x-7.5 bottom-7.5 flex justify-between">
                 <ul class="flex self-end flex-wrap gap-2">
                     <li class="button whitespace-nowrap">Ремонт</li>
@@ -142,14 +142,14 @@
         </section>
     </main>
     <footer class="h-screen relative p-7.5" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg3.jpg') }}') center/cover no-repeat">
-        <div class="w-1/2 min-w-min h-full p-8 relative border border-white">
+        <div class="w-full md:w-1/2 h-full p-8 relative border border-white">
             <div class="absolute inset-0 w-full h-full bg-[#66584F] opacity-75"></div>
             <div class="relative z-20 h-full flex flex-col justify-between">
-                <p class="text-white font-bold text-2xl">
+                <p class="text-white font-bold text-xl md:text-2xl">
                     От идеи до реализации: Разрабатываем дизайн-проект и выполняем премиальный ремонт, обеспечивая полное соответствие результата вашему видению.
                 </p>
                 <div class="text-white w-min border border-white p-3 whitespace-nowrap rounded-xl">
-                    <b class="text-3xl">Марат Мартиросов</b><br>
+                    <b class="text-2xl md:text-3xl">Марат Мартиросов</b><br>
                     Генеральный директор
                 </div>
                 <p class="font-thin text-white">
@@ -162,4 +162,29 @@
         <img class="hidden md:block absolute bottom-4.5 right-37 size-32 bg-cover" src="static\images\QRs\qr2.jpg" alt="">
     </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const trigger = document.querySelector('.group');
+        const form = document.querySelector('.absolute.right-0.top-full');
+        
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (form.classList.contains('hidden')) {
+                form.classList.remove('hidden');
+            } else {
+                form.classList.add('hidden');
+            }
+        });
+        
+        document.addEventListener('click', function(e) {
+            if (!trigger.contains(e.target)) {
+                form.classList.add('hidden');
+            }
+        });
+        
+        form.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+</script>
 </html>
