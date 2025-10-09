@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+    --color-main: #392615;
+    --color-secondary: #66584F;
+}
+
 @layer base {
     * {
         @apply text-white;
-        /*
-        Временно
-        @apply border;
-        */
     }
     h1 {
         @apply font-bold lg:font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl;
@@ -23,12 +24,19 @@
     figure {
         @apply relative;
     }
-    /* Временно */
+    input {
+        @apply border-b border-white m-1;
+    }
 }
 
 @layer components {
     .button {
-        @apply border size-min rounded-full p-1 m-1;
+        @apply border size-min rounded-full p-1 m-1 whitespace-nowrap;
     }
-    /* Временно */
+    .QR {
+        @apply hidden md:block size-32 bg-cover;
+    }
+    .full {
+        @apply w-full h-full;
+    }
 }
