@@ -1,190 +1,318 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dim Buro</title>
-    <link href="{{ url_for('static', path='/dist/styles.css') }}" rel="stylesheet">
-    <link rel="icon" href="{{ url_for('static', path='/images/icons/favicon.ico') }}" type="image/x-icon">
-</head>
-<body>
-    <header class="fixed w-full z-50">
-        <img class="absolute size-32 right-0 top-0 bg-contain" src="static\images\icons\logo.png" alt="">
+    <link
+      href="{{ url_for('static', path='/dist/styles.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', path='/images/icons/favicon.ico') }}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="fixed z-50 w-full">
+      <img
+        class="absolute top-0 right-0 size-32 bg-contain"
+        src="static\images\icons\logo.png"
+        alt=""
+      />
     </header>
-    <div class="min-w-min border border-white fixed right-0 top-1/2 -translate-y-1/2 group z-50">
-        <div class="-z-1 absolute inset-0 full bg-[#66584F] opacity-75"></div>
-        <div class="w-full px-4 py-2 cursor-pointer flex items-center gap-2 text-white touch-manipulation">
-            <div class="w-0 h-0 border-t-[5px] border-b-[5px] border-r-[5px] border-t-transparent border-b-transparent border-r-white"></div>
-            <span class="hidden md:block">Оставить заявку</span>
-        </div>
-        <div class="absolute right-0 top-full w-[50wh] md:w-min h-min border border-t-0 hidden group-hover:block group-focus:block">
-            <div class="-z-1 absolute inset-0 full bg-[#66584F] opacity-75"></div>
-            <form class="p-1" action="/postdata" method="post">
-                <p>
-                    ФИО:<br>
-                    <input name="fullname" />
-                </p>
-                <p>
-                    Номер телефона:<br>
-                    <input name="phonenumber" type="tel" />
-                </p>
-                <input type="submit" value="Отправить заявку" />
-            </form>
-        </div>
+    <div
+      class="group fixed top-1/2 right-0 z-50 min-w-min -translate-y-1/2 border border-white"
+    >
+      <div
+        class="absolute inset-0 -z-1 size-full bg-[#66584F] opacity-75"
+      ></div>
+      <div
+        class="flex w-full cursor-pointer touch-manipulation items-center gap-2 px-4 py-2 text-white"
+      >
+        <div
+          class="h-0 w-0 border-t-[5px] border-r-[5px] border-b-[5px] border-t-transparent border-r-white border-b-transparent"
+        ></div>
+        <span class="hidden md:block">Оставить заявку</span>
+      </div>
+      <div
+        class="absolute top-full right-0 hidden h-min w-[50wh] border border-t-0 group-hover:block group-focus:block md:w-min"
+      >
+        <div
+          class="absolute inset-0 -z-1 size-full bg-[#66584F] opacity-75"
+        ></div>
+        <form class="p-1" action="/postdata" method="post">
+          <p>
+            ФИО:<br />
+            <input name="fullname" />
+          </p>
+          <p>
+            Номер телефона:<br />
+            <input name="phonenumber" type="tel" />
+          </p>
+          <input type="submit" value="Отправить заявку" />
+        </form>
+      </div>
     </div>
     <main>
-        <section class="min-h-screen p-7.5 pt-18" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat">  
-            <h1>Воплощаем ваши мечты в ремонте</h1>
-            <nav class="absolute inset-x-7.5 bottom-7.5 flex justify-between">
-                <ul class="flex self-end flex-wrap gap-2">
-                    <li class="button">Ремонт</li>
-                    <li class="button">Мебель</li>
-                    <li class="button">Строительство</li>
-                    <li class="button">Декорирование</li>
-                    <li class="button">Дизайн и проектирование</li>
-                </ul>
-                <img class="hidden md:block size-32 bg-center" src="static\images\QRs\qr1.jpg" alt="">
-            </nav>
+      <section
+        class="min-h-screen p-7.5 pt-18"
+        style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg1.jpg') }}') center/cover no-repeat"
+      >
+        <h1>Воплощаем ваши мечты в ремонте</h1>
+        <nav class="absolute inset-x-7.5 bottom-7.5 flex justify-between">
+          <ul class="flex flex-wrap gap-2 self-end">
+            <li class="button">Ремонт</li>
+            <li class="button">Мебель</li>
+            <li class="button">Строительство</li>
+            <li class="button">Декорирование</li>
+            <li class="button">Дизайн и проектирование</li>
+          </ul>
+          <img
+            class="hidden size-32 bg-center md:block"
+            src="static\images\QRs\qr1.jpg"
+            alt=""
+          />
+        </nav>
+      </section>
+      <section
+        class="p-7.5"
+        style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg2.jpg') }}') center/cover no-repeat fixed"
+      >
+        <h2>О РЕМОНТЕ</h2>
+        <section>
+          <h3>ЭТАПЫ РЕМОНТА ПОД КЛЮЧ</h3>
+          <ul
+            class="grid grid-cols-2 grid-rows-2 items-stretch gap-4 p-2 lg:grid-cols-4 lg:grid-rows-1"
+          >
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/project-design.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+                <figcaption class="absolute right-4.5 bottom-4.5 left-4.5">
+                  <span class="font-semibold">Дизайн проекта</span>
+                  <details class="mt-2 text-sm">
+                    Наше дизайн бюро воплотит ваши мечты и согласует с вами
+                    ремонт и планировку объекта
+                  </details>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/repair.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+                <figcaption class="absolute right-4.5 bottom-4.5 left-4.5">
+                  <span class="font-semibold">Ремонт</span>
+                  <details class="mt-2 text-sm">
+                    Выполним все с безупречным качеством и вниманием к каждой
+                    детали
+                  </details>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/furniture.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+                <figcaption class="absolute right-4.5 bottom-4.5 left-4.5">
+                  <span class="font-semibold">Мебель</span>
+                  <details class="mt-2 text-sm">
+                    Изготавливаем и устанавливаем мебель под ваш проект и
+                    особенности пространства
+                  </details>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/decoration.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+                <figcaption class="absolute right-4.5 bottom-4.5 left-4.5">
+                  <span class="font-semibold">Декорирование</span>
+                  <details class="mt-2 text-sm">
+                    Комплексный подход к ремонту позволит вам переехать в
+                    полностью готовый объект
+                  </details>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
         </section>
-        <section class="p-7.5" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg2.jpg') }}') center/cover no-repeat fixed">
-            <h2>О РЕМОНТЕ</h2>
-            <section>
-                <h3>ЭТАПЫ РЕМОНТА ПОД КЛЮЧ</h3>
-                <ul class="grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-4 items-stretch p-2">
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/project-design.jpg') }}') center/cover no-repeat" src="" alt="">
-                            <figcaption class="absolute bottom-4.5 left-4.5 right-4.5">
-                                <span class="font-semibold">Дизайн проекта</span>
-                                <details class="mt-2 text-sm">Наше дизайн бюро воплотит ваши мечты и согласует с вами ремонт и планировку объекта</details>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/repair.jpg') }}') center/cover no-repeat" src="" alt="">
-                            <figcaption class="absolute bottom-4.5 left-4.5 right-4.5">
-                                <span class="font-semibold">Ремонт</span>
-                                <details class="mt-2 text-sm">Выполним все с безупречным качеством и вниманием к каждой детали</details>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/furniture.jpg') }}') center/cover no-repeat" src="" alt="">
-                            <figcaption class="absolute bottom-4.5 left-4.5 right-4.5">
-                                <span class="font-semibold">Мебель</span>
-                                <details class="mt-2 text-sm">Изготавливаем и устанавливаем мебель под ваш проект и особенности пространства</details>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/stages/decoration.jpg') }}') center/cover no-repeat" src="" alt="">
-                            <figcaption class="absolute bottom-4.5 left-4.5 right-4.5">
-                                <span class="font-semibold">Декорирование</span>
-                                <details class="mt-2 text-sm">Комплексный подход к ремонту позволит вам переехать в полностью готовый объект</details>
-                            </figcaption>
-                        </figure>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h3>ЭКСКЛЮЗИВНЫЕ РЕШЕНИЯ ДЛЯ ЖК PREMIUM КЛАССА</h3>
-                <ul class="grid grid-cols-3 grid-rows-3 gap-3 items-stretch p-2">
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/kitchen-1.jpg') }}') center/cover no-repeat" src="" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/wardrobe.jpg') }}') center/cover no-repeat" src="" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/bathroom.jpg') }}') center/cover no-repeat" src="" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/office-2.jpg') }}') center/cover no-repeat" src="" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/master-room-1.jpg') }}') center/cover no-repeat" src="" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/master-room-2.jpg') }}') center/cover no-repeat" src="" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/office-1.jpg') }}') center/cover no-repeat" src="" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/kitchen-2.jpg') }}') center/cover no-repeat" src="" alt="">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="min-h-[250px] h-full flex flex-col">
-                            <img class="flex-1" style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/hall.jpg') }}') center/cover no-repeat" src="" alt="">
-                        </figure>
-                    </li>
-                </ul>
-            </section>
+        <section>
+          <h3>ЭКСКЛЮЗИВНЫЕ РЕШЕНИЯ ДЛЯ ЖК PREMIUM КЛАССА</h3>
+          <ul class="grid grid-cols-3 grid-rows-3 items-stretch gap-3 p-2">
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/kitchen-1.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/wardrobe.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/bathroom.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/office-2.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/master-room-1.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/master-room-2.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/office-1.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/kitchen-2.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+              </figure>
+            </li>
+            <li>
+              <figure class="flex h-full min-h-[250px] flex-col">
+                <img
+                  class="flex-1"
+                  style="background: linear-gradient(to top, #392615, transparent), url('{{ url_for('static', path='/images/solutions/hall.jpg') }}') center/cover no-repeat"
+                  src=""
+                  alt=""
+                />
+              </figure>
+            </li>
+          </ul>
         </section>
+      </section>
     </main>
-    <footer class="h-screen relative p-7.5" style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg3.jpg') }}') center/cover no-repeat">
-        <div class="full md:w-1/2 p-8 relative border border-white">
-            <div class="absolute inset-0 full bg-[#66584F] opacity-75"></div>
-            <div class="relative z-20 h-full flex flex-col justify-between">
-                <p class="text-white font-bold text-xl md:text-2xl">
-                    От идеи до реализации: Разрабатываем дизайн-проект и выполняем премиальный ремонт, обеспечивая полное соответствие результата вашему видению.
-                </p>
-                <div class="text-white w-min border border-white p-3 whitespace-nowrap rounded-xl">
-                    <b class="text-2xl md:text-3xl">Марат Мартиросов</b><br>
-                    Генеральный директор
-                </div>
-                <p class="font-thin text-white">
-                    <a href="callto:7-903-562-5740">+7 (903) 562 - 57 - 40</a><br><br>
-                    <a href="https://dimburo.ru">dimburo.ru</a>
-                </p>
-            </div>
+    <footer
+      class="relative h-screen p-7.5"
+      style="background: linear-gradient(to right, #392615, transparent), url('{{ url_for('static', path='/images/backgrounds/bg3.jpg') }}') center/cover no-repeat"
+    >
+      <div class="relative size-full border border-white p-8 md:w-1/2">
+        <div class="absolute inset-0 size-full bg-[#66584F] opacity-75"></div>
+        <div class="relative z-20 flex h-full flex-col justify-between">
+          <p class="text-xl font-bold text-white md:text-2xl">
+            От идеи до реализации: Разрабатываем дизайн-проект и выполняем
+            премиальный ремонт, обеспечивая полное соответствие результата
+            вашему видению.
+          </p>
+          <div
+            class="w-min rounded-xl border border-white p-3 whitespace-nowrap text-white"
+          >
+            <b class="text-2xl md:text-3xl">Марат Мартиросов</b><br />
+            Генеральный директор
+          </div>
+          <p class="font-thin text-white">
+            <a href="callto:7-903-562-5740">+7 (903) 562 - 57 - 40</a
+            ><br /><br />
+            <a href="https://dimburo.ru">dimburo.ru</a>
+          </p>
         </div>
-        <img class="QR absolute bottom-4.5 right-4.5" src="static\images\QRs\qr1.jpg" alt="">
-        <img class="QR absolute bottom-4.5 right-37" src="static\images\QRs\qr2.jpg" alt="">
+      </div>
+      <img
+        class="QR absolute right-4.5 bottom-4.5"
+        src="static\images\QRs\qr1.jpg"
+        alt=""
+      />
+      <img
+        class="QR absolute right-37 bottom-4.5"
+        src="static\images\QRs\qr2.jpg"
+        alt=""
+      />
     </footer>
-</body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const trigger = document.querySelector('.group');
-        const form = document.querySelector('.absolute.right-0.top-full');
-        
-        trigger.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (form.classList.contains('hidden')) {
-                form.classList.remove('hidden');
-            } else {
-                form.classList.add('hidden');
-            }
-        });
-        
-        document.addEventListener('click', function(e) {
-            if (!trigger.contains(e.target)) {
-                form.classList.add('hidden');
-            }
-        });
-        
-        form.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const trigger = document.querySelector(".group");
+      const form = document.querySelector(".absolute.right-0.top-full");
+
+      trigger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (form.classList.contains("hidden")) {
+          form.classList.remove("hidden");
+        } else {
+          form.classList.add("hidden");
+        }
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!trigger.contains(e.target)) {
+          form.classList.add("hidden");
+        }
+      });
+
+      form.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
     });
-</script>
+  </script>
 </html>

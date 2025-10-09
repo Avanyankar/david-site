@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --watch",
-    "build": "tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css --minify",
-    "build-dev": "tailwindcss -i ./static/src/styles.css -o ./static/dist/styles.css",
+    "dev": "npx @tailwindcss/cli -i ./static/src/styles.css -o ./static/dist/styles.css --watch",
+    "build": "npx @tailwindcss/cli -i ./static/src/styles.css -o ./static/dist/styles.css --minify",
+    "build-dev": "npx @tailwindcss/cli -i ./static/src/styles.css -o ./static/dist/styles.css",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "format-html": "prettier --write \"templates/**/*.html\""

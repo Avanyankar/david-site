@@ -36,7 +36,4 @@
     .QR {
         @apply hidden md:block size-32 bg-cover;
     }
-    .full {
-        @apply w-full h-full;
-    }
 }
