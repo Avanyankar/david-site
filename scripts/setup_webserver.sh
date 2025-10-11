@@ -2,7 +2,7 @@
 
 set -e
 
-echo "=== Настройка webserver ==="
+echo "=== Настройка инструментов Веб-сервера ==="
 
 sudo apt install -y nginx uvicorn
 
